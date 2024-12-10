@@ -1,0 +1,47 @@
+---
+export interface CardProps {
+  image: string;
+  label: string;
+  title: string;
+  description: string;
+  price: string;
+  buttonText: string;
+  extralabel: string; // Optional prop for the additional label
+}
+
+import { Image } from "astro:assets";
+import bottle from "../assets/images/red_bottle.svg";
+const { image, label, title, description, price, buttonText, extralabel } = Astro.props;
+---
+
+<div class="max-w-sm bg-neutral-800 rounded-none shadow-drop25 h-xs col-span-4">
+  <div class="image">
+    <img class="rounded-t-none w-xs h-xs" src={image} alt={title} />
+  </div>
+  <!-- Label 1 -->
+  <div class="relative">
+    <span class="flex flex-row justify-evenly gap-3 items-center absolute bottom-4 right-0 text-neutral-950 bg-neutral-50 p-2 w-24">
+      {label}
+      <Image src={bottle} alt="bottle icon" width="10" height="10" />
+    </span>
+  </div>
+  <!-- Label 2 (Only on Card with Position 1) -->
+  {
+    extralabel && (
+      <div class="relative flex flex-col justify-center items-center gap-1">
+        <span class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-2 text-center w-40 bg-red-700 text-neutral-50">
+          {extralabel}
+        </span>
+      </div>
+    )
+  }
+  <!-- Content -->
+  <div class="p-5">
+    <h3 class="mb-2 tracking-tight text-neutral-50">{title}</h3>
+    <p class="mb-8 font-normal text-neutral-50">{description}</p>
+    <h4 class="md:mb-mobil-bottom text-h3-desktop text-neutral-50">{price}</h4>
+    <a href="#" class="inline-flex items-center justify-center py-2 px-3 font-medium text-center text-neutral-50 bg-red-800 hover:bg-red-900">
+      {buttonText}
+    </a>
+  </div>
+</div>
