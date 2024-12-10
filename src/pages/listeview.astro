@@ -11,7 +11,7 @@ const cards = [
     label: "6 stk",
     extralabel: "Mest populær!",
     title: "Rødvinskasse",
-    description: "Seks nøje udvalgte rødvine, der tager dig med på en smagsrejse gennem forskellige regioner og druesorter.",
+    description: "Seks rødvine, der tager dig med på en rejse gennem forskellige regioner og druesorter.",
     price: "349 DKK",
     buttonText: "Læs mere",
   },
@@ -27,7 +27,7 @@ const cards = [
     image: "/mixed_card1.webp",
     label: "3 stk",
     title: "Blandet kasse",
-    description: "En eksklusiv kollektion af rød- og hvidvine, der tilbyder en smagsrejse fra fyldige til friske nuancer. ",
+    description: "En samling af rød- og hvidvine, der tilbyder en smagsrejse fra fyldige til friske nuancer.",
     price: "349 DKK",
     buttonText: "Læs mere",
   },
@@ -35,7 +35,7 @@ const cards = [
     image: "/red_card2.webp",
     label: "3 stk",
     title: "Rødvinskasse",
-    description: "Tre udsøgte rødvine, der tager dig med på en smagsrejse gennem forskellige regioner og druesorter.",
+    description: "Tre rødvine, der tager dig med på en rejse gennem forskellige regioner og druesorter.",
     price: "349 DKK",
     buttonText: "Læs mere",
   },
@@ -59,8 +59,22 @@ const cards = [
 ---
 
 <MainLayout title="Vinkasser">
+  <div class="relative flex justify-center items-center">
+    <img
+      src="/hero_listview.webp"
+      alt="Image of four glasses containing red, white and rose wine, with bread and cheese on the table"
+      class="w-full h-96 object-cover"
+    />
+    <!-- Dark overlay -->
+    <div class="md:h-full h-[99%] absolute inset-0 bg-[#141414] backdrop-blur-sm bg-opacity-35 z-[20]"></div>
+  </div>
+  <div class="absolute w-full px-[20px] md:pl-2xl top-[53%] left-[55%] transform -translate-x-1/2 -translate-y-1/2 z-[30]">
+    <h1 class="display text-neutral-50 pb-xl">VINKASSER</h1>
+  </div>
   <section class="max-w-7xl mx-auto md:p-0 p-8">
-    <section class="grid md:grid-cols-12 gap-gap pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top">
+    <section
+      class="flex flex-col justify-center items-center md:grid md:grid-cols-12 gap-gap pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top"
+    >
       {/* Map over the cards */}
       {
         cards.map((card) => (
