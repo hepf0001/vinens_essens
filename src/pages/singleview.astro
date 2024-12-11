@@ -13,7 +13,7 @@ import Link from "../components/Link.astro";
             </div>
             <section class="col-span-6 bg-neutral-900">
                 <section class="grid md:grid-cols-6 h-full">
-                    <section class="col-span-4 col-start-2 py-10">
+                    <section class="col-span-4 col-start-2 py-10 p-5">
                         <h1 class="md:text-h2-desktop text-h2-mobile font-display font-bold">Blandet kasse – 3 flasker</h1>
                         <br />
                         <hr class="border-t-2 border-red-800 w-28" />
@@ -34,24 +34,24 @@ import Link from "../components/Link.astro";
 
         <!------------------------------ Infografik ------------------------------>
         <section class="grid md:grid-cols-12 gap-gap md:pb-desktop-bottom pb-mobil-bottom">
-            <section class="col-span-3 flex flex-col items-center text-center">
-                <img class="h-40 mb-4" src="/vaelg_red.svg" alt="En computermus der vælger vinkasse" />
+            <section class="col-span-3 flex flex-col items-center text-center md:pb-0 pb-10">
+                <img class="md:h-40 h-32 mb-4" src="/vaelg_red.svg" alt="En computermus der vælger vinkasse" />
                 <div>
                     <h1 class="md:text-h4-desktop text-h4-mobile font-display font-semibold">1. Vælg din pakke</h1>
                     <p>Find den pakke, der passer bedst til dig, og glæd dig til spændende vinoplevelser hver måned.</p>
                 </div>
             </section>
 
-            <section class="col-span-3 flex flex-col items-center text-center">
-                <img class="h-40 mb-4" src="/udvaelger_red.svg" alt="En hånd der vælger vin" />
+            <section class="col-span-3 flex flex-col items-center text-center md:pb-0 pb-10">
+                <img class="md:h-40 h-32 mb-4" src="/udvaelger_red.svg" alt="En hånd der vælger vin" />
                 <div>
                     <h1 class="md:text-h4-desktop text-h4-mobile font-display font-semibold">2. Vi udvælger vinen</h1>
                     <p>Hver måned håndplukker vi 3-6 vine af høj kvalitet, så du kan opleve nye smagsoplevelser.</p>
                 </div>
             </section>
 
-            <section class="col-span-3 flex flex-col items-center text-center">
-                <img class="h-40 mb-4" src="/levering_red.svg" alt="En varervong der levere" />
+            <section class="col-span-3 flex flex-col items-center text-center md:pb-0 pb-10">
+                <img class="md:h-40 h-32 mb-4" src="/levering_red.svg" alt="En varervong der levere" />
                 <div>
                     <h1 class="md:text-h4-desktop text-h4-mobile font-display font-semibold">3. Gratis levering</h1>
                     <p>Alle vores abonnenter får altid gratis levering – nemt og bekvemt.</p>
@@ -59,7 +59,7 @@ import Link from "../components/Link.astro";
             </section>
 
             <section class="col-span-3 flex flex-col items-center text-center">
-                <img class="h-40 mb-4" src="/nyd_red.svg" alt="To vinglas der skåler" />
+                <img class="md:h-40 h-32 mb-4" src="/nyd_red.svg" alt="To vinglas der skåler" />
                 <div>
                     <h1 class="md:text-h4-desktop text-h4-mobile font-display font-semibold">4. Nyd din vin</h1>
                     <p>Skænk op, læn dig tilbage, og nyd de unikke smagsnuancer i hver flaske.</p>
@@ -68,11 +68,36 @@ import Link from "../components/Link.astro";
         </section>
 
         <!------------------------------ Tidligere vinkasse ------------------------------>
-        <section class="grid md:grid-cols-12 gap-gap md:pb-desktop-bottom pb-mobil-bottom">
+        <section class="grid md:grid-cols-12 gap-gap md:pb-10 pb-5">
             <section class="col-span-6">
                 <h1 class="md:text-h2-desktop text-h2-mobile font-display font-bold">Tidligere vinkasse</h1>
                 <br />
                 <p>Hver måned sammensætter vi unikke vinkasser med nøje udvalgte vine af høj kvalitet til en samlet værdi på ca. 900 DKK. Her kan du få et indblik i, hvad en af vores tidligere vinkasser har indeholdt.</p>
+            </section>
+        </section>
+        <section class="grid md:grid-cols-12 gap-gap md:pb-desktop-bottom pb-mobil-bottom">
+            <section class="col-span-4 relative">
+                <div class="relative w-full h-[28rem]">
+                    <img src="/tidligere_1.webp" alt="Xavier Vignon Lirac" class="w-full h-full object-cover" />
+                    <div class="absolute inset-0 bg-neutral-950 bg-opacity-35"></div>
+                    <h2 class="absolute bottom-0 left-0 right-0 text-center p-4 md:text-h3-desktop text-h3-mobile font-display font-semibold">Xavier Vignon Lirac</h2>
+                </div>
+            </section>
+
+            <section class="col-span-4 relative">
+                <div class="relative w-full h-[28rem]">
+                    <img src="/tidligere_2.webp" alt="Torrione Petrolo" class="w-full h-full object-cover" />
+                    <div class="absolute inset-0 bg-neutral-950 bg-opacity-35"></div>
+                    <h2 class="absolute bottom-0 left-0 right-0 text-center p-4 md:text-h3-desktop text-h3-mobile font-display font-semibold">Torrione Petrolo</h2>
+                </div>
+            </section>
+
+            <section class="col-span-4 relative">
+                <div class="relative w-full h-[28rem]">
+                    <img src="/tidligere_3.webp" alt="Nebla Verdejo" class="w-full h-full object-cover" />
+                    <div class="absolute inset-0 bg-neutral-950 bg-opacity-35"></div>
+                    <h2 class="absolute bottom-0 left-0 right-0 text-center p-4 md:text-h3-desktop text-h3-mobile font-display font-semibold">Nebla Verdejo</h2>
+                </div>
             </section>
         </section>
     </section>
