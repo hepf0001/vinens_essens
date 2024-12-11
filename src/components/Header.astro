@@ -22,6 +22,7 @@ import Link from "../components/Link.astro";
         <li class=""><a href="/formular_vinkasse">formular_vinkasse</a></li>
         <li class=""><a href="/">index</a></li>
         <li class=""><a href="/om">om</a></li>
+        <li class=""><a href="/listeview">listeview</a></li>
         <li class=""><a href="/singleview">singleview</a></li>
       </ul>
     </nav>
@@ -31,7 +32,14 @@ import Link from "../components/Link.astro";
       </svg>
     </button>
   </div>
-  <nav id="mobilmenu" class="flex flex-col content-center pt-4" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+  <nav
+    id="mobilmenu"
+    class="flex flex-col content-center pt-4"
+    x-show="showmenu"
+    x-transition
+    x-on:click="showmenu = false"
+    x-on:click.outside="showmenu = false"
+  >
     <ul>
       <li class=""><a href="/alder_nej">alder_nej</a></li>
       <li class=""><a href="/alder">alder</a></li>
