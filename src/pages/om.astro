@@ -5,5 +5,96 @@ import Link from "../components/Link.astro";
 ---
 
 <MainLayout title="Om os">
-    <section class="max-w-7xl mx-auto md:p-0 p-8"></section>
+  <div class="relative flex justify-center items-center">
+    <img
+      src="/hero_about.webp"
+      alt="Image of a three glasses of white wine, being held closely by three people cheering"
+      class="w-full h-96 object-cover"
+    />
+    <!-- Dark overlay -->
+    <div class="md:h-full absolute inset-0 bg-[#141414] backdrop-blur-sm bg-opacity-35 z-[20]"></div>
+  </div>
+  <div class="absolute w-full px-[20px] md:pl-2xl top-[53%] left-[55%] transform -translate-x-1/2 -translate-y-1/2 z-[30]">
+    <h1 class="display text-neutral-50 pb-xl">OM OS</h1>
+  </div>
+  <section class="max-w-7xl mx-auto md:p-0 p-8">
+    <div class="grid md:grid-cols-12 md:gap-32 gap-12 pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top items-center">
+      <!-- Image section -->
+      <div class="md:col-span-5 flex justify-center">
+        <img src="/about1.webp" alt="Image of a glass getting white wine poured from a bottle" class="w-[450px] h-[450px] object-cover" />
+      </div>
+      <!-- Text section -->
+      <div class="md:col-span-6">
+        <h2 class="text-2xl font-bold">Hvem er vi?</h2>
+        <hr class="my-2 mb-8 w-40 h-[0.2rem] bg-red-800" />
+        <p class="text-base leading-relaxed">
+          Vi er et passioneret ægtepar, der deler en dyb kærlighed for vin&mdash; en kærlighed, der gennem årene er blevet styrket gennem rejser til
+          nogle af verdens mest ikoniske vinregioner og utallige møder med dygtige vinproducenter. Denne erfaring har givet os en unik indsigt i
+          vinens verden og en forståelse for, hvad der gør en vin helt særlig. Vi glæder os til at dele denne viden og vores nøje udvalgte flasker med
+          dig.
+          <br /><br />
+          Når vi vælger vin til vores sortiment, lægger vi vægt på både kvalitet, smag og de historier, som hver vin bærer med sig. Vi udvælger kun vine,
+          der lever op til vores høje standarder og tilbyder en oplevelse, der kan glæde både den erfarne vinelsker og den, der er nysgerrig på nye smagsnuancer.
+          <br /><br />
+          Vores ambition er at gøre vinoplevelsen elegant og imødekommende. Vi stræber efter at gøre vin nemt tilgængeligt uden at gå på kompromis med
+          eksklusivitet og kvalitet. Med vores erfaring og dedikation tilbyder vi en personlig og professionel service, der hjælper dig med at finde den
+          perfekte vin til enhver lejlighed. Vores fokus er at skabe smagsoplevelser, der ikke blot opfylder dine forventninger, men også overrasker og
+          inspirerer.
+        </p>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-12 md:gap-28 gap-12 pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top items-center">
+      <!-- Text section -->
+      <div class="md:col-span-7">
+        <h2 class="text-2xl font-bold">Overraskelse <br class="hidden md:block" /> hver måned</h2>
+        <hr class="my-2 mb-8 w-40 h-[0.2rem] bg-red-800" />
+        <p class="text-base leading-relaxed">
+          Vi ønsker at dele vores passion for vin på en måde, der både overrasker og inspirerer. Hver måned sammensætter vi en unik smagsoplevelse,
+          hvor vores viden og erfaring kommer til udtryk. Med samme omhu, som vi udvælger vores sortiment, finder vi flasker, der enten fortæller en
+          historie, introducerer nye smagsnuancer eller fremhæver særlige traditioner fra vinens verden.
+          <br /><br />
+          Denne månedlige overraskelse er skabt til dig, der ønsker at udforske og blive inspireret, uden at det føles kompliceret. Det er vores måde at
+          bringe vinens mangfoldighed hjem til dig&mdash; en elegant og personlig gave, der kan nydes alene eller deles med dem, du holder af.
+        </p>
+      </div>
+      <!-- Image section -->
+      <div class="md:col-span-5 flex justify-end">
+        <img src="/about2.webp" alt="Image of two different glasses of wine" class="w-[450px] h-[450px] object-cover" />
+      </div>
+    </div>
+    <div class="max-w-7xl pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top">
+      <!-- Mission & Vision Section -->
+      <div class="grid md:grid-cols-2 grid-cols-1 justify-center">
+        <div class="bg-neutral-800 text-neutral-50 p-8 order-1 md:order-none">
+          <h3 class="mb-4">Mission & Vision</h3>
+          <p>
+            Hos Vinens Essens ønsker vi at gøre vin til en personlig og uforglemmelig oplevelse. Vi tilbyder vine af høj kvalitet, der vækker
+            nysgerrighed og glæde, samtidig med at vi holder det enkelt og tilgængeligt. Vores vision er at skabe en vinoplevelse, som kan nydes af
+            alle, uanset viden eller erfaring, og at gøre vin mere tilgængeligt uden at gå på kompromis med elegance og kvalitet.
+          </p>
+        </div>
+        <div class="order-2 md:order-none">
+          <img src="/values1.webp" alt="Image of wine fields" class="w-full h-[350px] object-cover" />
+        </div>
+      </div>
+
+      <!-- Values Section -->
+      <div class="grid md:grid-cols-2 grid-cols-1">
+        <div class="order-2 md:order-1">
+          <img src="/values2.webp" alt="Image of a wine cellar, with rows of different wines" class="w-full h-[350px] object-cover" />
+        </div>
+        <div class="bg-neutral-800 text-neutral-50 p-8 order-1 md:order-2">
+          <h3 class="mb-4">Værdier</h3>
+          <p>
+            Vi brænder for vin og deler gerne vores glæde med vores kunder. Hver flaske vi udvælger, lever op til vores høje standarder for kvalitet
+            og smag. Vi stræber efter at give en personlig og imødekommende service, hvor elegance og eksklusivitet kombineres med enkelhed og
+            tilgængelighed, så alle kan nyde vinens mange nuancer.
+          </p>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <hr class="my-12 mb-8 w-40 h-[0.2rem] bg-red-800" />
+      </div>
+    </div>
+  </section>
 </MainLayout>

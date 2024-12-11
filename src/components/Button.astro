@@ -1,11 +1,11 @@
 ---
 const { variant = "primary", size = "medium" } = Astro.props;
 
-const buttonStyling = "rounded-full px-6 p-2 font-semibold transition transform hover:-translate-y-1 uppercase";
+const buttonStyling = "shadow-drop25 px-6 p-2 transition duration-300 ease-in-out";
 
 const variantClasses = {
-  primary: "bg-red-700 hover:bg-red-800 text-white",
-  secondary: "border-2 border-red-700 hover:border-red-800 text-red-700 hover:text-red-800",
+  primary: "bg-transparent font-semibold border-3 border-neutral-50 hover:bg-red-900 hover:border-red-900 text-neutral-50",
+  secondary: "bg-red-700 hover:bg-red-900 text-neutral-50",
 };
 
 const sizeClasses = {
