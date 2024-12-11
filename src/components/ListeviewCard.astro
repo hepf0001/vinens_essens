@@ -19,11 +19,12 @@ const { image, label, title, description, price, buttonText, extralabel } = Astr
   class="max-w-[400px] bg-neutral-800 rounded-none shadow-drop25 h-xs col-span-4 transform hover:scale-[1.02] transition-all duration-300 ease-in-out"
 >
   <a href="/singleview">
-    <div class="image">
+    <div class="image relative">
       <img class="w-xs h-xs h-[50%] w-[100%]" src={image} alt={title} />
+      <div class="md:h-full h-[50%] absolute inset-0 bg-[#414141] bg-opacity-30 z-[20]"></div>
     </div>
     <!-- Labels Container (relative positioning) -->
-    <div class="relative flex flex-col justify-center items-center">
+    <div class="relative flex flex-col justify-center items-center z-[30]">
       <!-- Label 1 -->
       <span class="flex flex-row justify-evenly gap-3 items-center absolute bottom-4 right-0 text-neutral-950 bg-neutral-50 p-2 w-24">
         {label}
