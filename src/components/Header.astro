@@ -3,7 +3,7 @@ import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
 ---
 
-<div x-data="{ showmenu: false }" class="fixed z-[100] items-center w-full bg-[#000000] bg-opacity-65 md:bg-transparent backdrop-blur-sm">
+<div x-data="{ showmenu: false }" class="fixed z-[100] p-2 items-center w-full bg-[#000000] bg-opacity-65 md:bg-transparent backdrop-blur-sm">
   <!-- brug "fixed" for at have den på siden hele vejen ned -->
   <div id="navbar" class="relative flex items-center max-w-7xl mx-auto z-[50]">
     <!-- Burger Menu -->
@@ -35,9 +35,9 @@ import Button from "../components/Button.astro";
     </button>
 
     <!-- Desktop Menu -->
-    <nav id="desktopmenu" class="hidden lg:flex flex-1 items-center justify-evenly py-2 px-8 bg-white shadow z-[20]">
+    <nav id="desktopmenu" class="hidden lg:flex flex-1 items-center justify-between py-4 px-8 bg-white shadow z-[20]">
       <!-- Left Section: Links -->
-      <ul class="some1 flex flex-row gap-32 list-none items-center text-center">
+      <ul class="flex flex-row gap-20 list-none items-center text-center">
         <li>
           <a href="/" class="text-neutral-50 py-2 hover:opacity-70">Hjem</a>
         </li>
@@ -47,7 +47,7 @@ import Button from "../components/Button.astro";
       </ul>
 
       <!-- Center Section: Logo -->
-      <div class="flex-shrink-0 flex items-center justify-center px-[8rem]">
+      <div class="absolute left-[45%] transform -translate-x-1/2">
         <a href="/">
           <img
             src="/Logo_hvid.svg"
@@ -58,9 +58,9 @@ import Button from "../components/Button.astro";
       </div>
 
       <!-- Right Section: Links and Button -->
-      <div class="flex items-center gap-32">
+      <div class="flex items-center gap-20">
         <ul class="list-none">
-          <li class="some1 hover:opacity-70">
+          <li class="hover:opacity-70">
             <a href="/listeview" class="text-neutral-50 py-2">Vinkasser</a>
           </li>
         </ul>
