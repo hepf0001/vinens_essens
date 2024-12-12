@@ -7,10 +7,11 @@ export interface CardProps {
   price: string;
   buttonText: string;
   extralabel: string; // Optional prop for the additional label
+  discountlabel: string;
 }
 
 import Button from "../components/Button.astro";
-const { image, label, title, description, price, buttonText, extralabel } = Astro.props;
+const { image, label, title, description, price, buttonText, extralabel, discountlabel } = Astro.props;
 ---
 
 <div
@@ -30,7 +31,14 @@ const { image, label, title, description, price, buttonText, extralabel } = Astr
       </span>
 
       <!-- Label 2 (Only on Card with Position 1) -->
-      {extralabel && <span class="absolute left-0 p-2 text-center w-40 bg-red-700 text-neutral-50 -top-[25rem]">{extralabel}</span>}
+      {extralabel && <span class="font-semibold absolute left-0 p-2 text-center w-40 bg-red-700 text-neutral-50 -top-[25rem]">{extralabel}</span>}
+
+      <!-- Discount Label (Only on Card with Discount) -->
+      {
+        discountlabel && (
+          <span class="font-semibold absolute -top-[25rem] left-0 p-2 text-center w-40 bg-red-500 text-neutral-50">{discountlabel}</span>
+        )
+      }
     </div>
     <!-- Content -->
     <div class="p-5">

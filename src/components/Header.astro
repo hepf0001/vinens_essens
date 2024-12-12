@@ -3,50 +3,65 @@ import Link from "../components/Link.astro";
 import Button from "../components/Button.astro";
 ---
 
-<div x-data="{ showmenu: false }" class="fixed p-2 z-[100] w-full bg-transparent backdrop-blur-sm">
+<div x-data="{ showmenu: false }" class="fixed z-[100] p-2 items-center w-full bg-[#000000] bg-opacity-65 md:bg-transparent backdrop-blur-sm">
   <!-- brug "fixed" for at have den på siden hele vejen ned -->
   <div id="navbar" class="relative flex items-center max-w-7xl mx-auto z-[50]">
     <!-- Burger Menu -->
-    <button id="burgermenu" class="lg:hidden absolute right-7 top-8 transform -translate-y-1/2" x-on:click="showmenu = !showmenu">
+    <button id="burgermenu" class="lg:hidden p-4" x-on:click="showmenu = !showmenu">
+      <!-- Menu icon (Hamburger) -->
       <svg
+        x-show="!showmenu"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="size-8 text-neutral-50 hover:text-red-800 transiton duration-300 ease-in-out"
+        class="size-8 text-neutral-50 hover:text-red-800 transition duration-300 ease-in-out"
       >
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"></path>
+      </svg>
+      <!-- Close icon (Cross) -->
+      <svg
+        x-show="showmenu"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        class="size-8 text-neutral-50 hover:text-red-800 transition duration-300 ease-in-out"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
       </svg>
     </button>
 
     <!-- Desktop Menu -->
-    <nav id="desktopmenu" class="hidden lg:flex flex-1 items-center justify-evenly py-2 px-8 bg-white shadow z-[20]">
+    <nav id="desktopmenu" class="hidden lg:flex flex-1 items-center justify-around py-4 px-8 bg-white shadow z-[20]">
       <!-- Left Section: Links -->
-      <ul class="flex flex-row gap-20 list-none items-center text-center">
-        <li class="some1">
-          <a href="/" class="text-neutral-50 text-sm leading-none">Hjem</a>
+      <ul class="some1 flex flex-row gap-20 list-none items-center text-center">
+        <li>
+          <a href="/" class="text-neutral-50 py-2 hover:opacity-70">Hjem</a>
         </li>
-        <li class="some1">
-          <a href="/om" class="text-neutral-50 text-sm leading-none">Om os</a>
-        </li>
-        <li class="some1">
-          <a href="/formular_levering" class="text-neutral-50 text-sm leading-none">Levering</a>
+        <li>
+          <a href="/om" class="text-neutral-50 py-2 hover:opacity-70">Om os</a>
         </li>
       </ul>
 
       <!-- Center Section: Logo -->
-      <div class="flex-shrink-0 flex items-center justify-center px-[5rem]">
-        <a href="#logo">
-          <img src="/Logo_hvid.svg" alt="Logo for Vinens Essens" class="h-20 transition duration-300 ease-in-out hover:scale-105 hover:opacity-50" />
+      <div class="flex items-center justify-center">
+        <a href="/">
+          <img
+            src="/Logo_hvid.svg"
+            alt="Logo for Vinens Essens"
+            class="h-20 transition duration-300 ease-in-out transform hover:-translate-y-[3px] hover:opacity-70"
+          />
         </a>
       </div>
 
       <!-- Right Section: Links and Button -->
       <div class="flex items-center gap-20">
-        <ul class="list-none">
-          <li class="some1">
-            <a href="/listeview" class="text-neutral-50 text-sm leading-none">Vinkasser</a>
+        <ul class="some1 list-none">
+          <li class="hover:opacity-70">
+            <a href="/listeview" class="text-neutral-50 py-2">Vinkasser</a>
           </li>
         </ul>
         <a href="/formular_vinkasse">
@@ -65,17 +80,15 @@ import Button from "../components/Button.astro";
     x-on:click="showmenu = false"
     x-on:click.outside="showmenu = false"
   >
-    <ul class="list-none pt-8 px-8">
-      <li class="some1 pt-8"><a href="/" class="text-neutral-50">Hjem</a></li>
-      <hr class="border-t-2 my-4 w-28 border-neutral-50" />
-      <li class="some1 pt-8"><a href="/om" class="text-neutral-50">Om os</a></li>
-      <hr class="border-t-2 my-4 w-28 border-neutral-50" />
-      <li class="some1 pt-8"><a href="/listeview" class="text-neutral-50">Vinkasser</a></li>
-      <hr class="border-t-2 my-4 w-28 border-neutral-50" />
-      <li class="some1 pt-8"><a href="/formular_levering" class="text-neutral-50">Levering</a></li>
-      <hr class="border-t-2 my-4 w-28 border-neutral-50" />
+    <ul class="some1 list-none pt-8 px-8">
+      <li class="pt-12"><a href="/" class="text-neutral-50 py-2 hover:opacity-70">Hjem</a></li>
+      <hr class="border-t-2 my-6 w-28 border-neutral-50" />
+      <li><a href="/om" class="text-neutral-50 py-2 hover:opacity-70">Om os</a></li>
+      <hr class="border-t-2 my-6 w-28 border-neutral-50" />
+      <li><a href="/listeview" class="text-neutral-50 py-2 hover:opacity-70">Vinkasser</a></li>
+      <hr class="border-t-2 my-6 w-28 border-neutral-50" />
     </ul>
-    <a href="/formular_vinkasse" class="mt-12 px-8">
+    <a href="/formular_vinkasse" class="mt-12 mb-4 px-8">
       <Button variant="primary" size="small">Bestil abonnement</Button>
     </a>
   </nav>
@@ -94,7 +107,7 @@ import Button from "../components/Button.astro";
     width: 100%;
     height: 2px;
     border-radius: 4px;
-    background-color: #7e1319;
+    background-color: #c60e18;
     bottom: 0;
     left: 0;
     transform-origin: right;

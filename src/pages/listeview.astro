@@ -44,12 +44,13 @@ const cards = [
     description: "Tre hvidvine, der forener friskhed, kompleksitet og elegance.",
     price: "349 DKK",
     buttonText: "Læs mere",
+    discountlabel: "Mængderabat!", // Added discount label to the third card
   },
   {
     image: "/mixed_card2.webp",
     label: "3 stk",
     title: "Blandet kasse",
-    description: "En kollektion af rød- og hvidvine, der tilbyder en smagsrejse fra fyldige til friske nuancer. ",
+    description: "En kollektion af rød- og hvidvine, der tilbyder en smagsrejse fra fyldige til friske nuancer.",
     price: "349 DKK",
     buttonText: "Læs mere",
   },
@@ -66,9 +67,12 @@ const cards = [
     <!-- Dark overlay -->
     <div class="h-full absolute inset-0 bg-neutral-950 bg-opacity-35 z-[20]"></div>
   </div>
-  <div class="absolute w-full px-[20px] md:pl-2xl top-[clamp(40vh, 50vh, 60vh)] left-[55vw] transform -translate-x-1/2 -translate-y-1/2 z-[30]">
-    <h1 class="display text-neutral-50 pb-xl">VINKASSER</h1>
+  <div
+    class="absolute w-full px-[20px] md:pl-2xl top-[clamp(40vh, 50vh, 60vh)] md:left-[20%] left-[45%] w-[fit-content] transform -translate-x-1/2 -translate-y-1/2 z-[30] overflow-hidden"
+  >
+    <h1 class="display text-neutral-50 w-[fit-content]">VINKASSER</h1>
   </div>
+
   <section class="max-w-7xl mx-auto md:p-0 p-8">
     <section
       class="flex flex-col justify-center items-center md:grid md:grid-cols-12 gap-gap pb-mobil-bottom md:pb-desktop-bottom pt-mobil-top md:pt-desktop-top"
@@ -81,6 +85,7 @@ const cards = [
             image={card.image}
             label={card.label}
             extralabel={card.position === 1 ? card.extralabel : null}
+            discountlabel={card.discountlabel}
             title={card.title}
             description={card.description}
             price={card.price}
