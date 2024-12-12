@@ -35,9 +35,9 @@ import Button from "../components/Button.astro";
     </button>
 
     <!-- Desktop Menu -->
-    <nav id="desktopmenu" class="hidden lg:flex flex-1 items-center justify-between py-4 px-8 bg-white shadow z-[20]">
+    <nav id="desktopmenu" class="hidden lg:flex flex-1 items-center justify-around py-4 px-8 bg-white shadow z-[20]">
       <!-- Left Section: Links -->
-      <ul class="flex flex-row gap-20 list-none items-center text-center">
+      <ul class="some1 flex flex-row gap-20 list-none items-center text-center">
         <li>
           <a href="/" class="text-neutral-50 py-2 hover:opacity-70">Hjem</a>
         </li>
@@ -47,7 +47,7 @@ import Button from "../components/Button.astro";
       </ul>
 
       <!-- Center Section: Logo -->
-      <div class="absolute left-[46%] transform -translate-x-1/2">
+      <div class="flex items-center justify-center">
         <a href="/">
           <img
             src="/Logo_hvid.svg"
@@ -59,7 +59,7 @@ import Button from "../components/Button.astro";
 
       <!-- Right Section: Links and Button -->
       <div class="flex items-center gap-20">
-        <ul class="list-none">
+        <ul class="some1 list-none">
           <li class="hover:opacity-70">
             <a href="/listeview" class="text-neutral-50 py-2">Vinkasser</a>
           </li>
