@@ -4,20 +4,26 @@ import Link from "../components/Link.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from 'astro:assets';
 import forsidebilledemobil from "../assets/images/forsidebilledemobil.png";
-import darkhillmobile from "../assets/images/forsidebillede2mobil.png";
+import darkhillmobile from "../assets/images/darkhillmobile.png";
 
 import forsidebillede2mobil from "../assets/images/forsidebillede2mobil.png";
 import twowinebottle from "../assets/images/twowinebottle.png";
 import winebottleandglas from "../assets/images/winebottleandglas.png";
 import wineshelfmobile from "../assets/images/wineshelfmobile.png";
-import stjerne from "../assets/images/stjerne.png";
+import stjerner from "../assets/images/stjerner.png";
+import trekantforsidemobil from "../assets/images/trekantforsidemobil.png";
+import trekantforsidemobildown from "../assets/images/trekantforsidemobildown.png";
+import linjeanmeldelsermobil from "../assets/images/linjeanmeldelsermobil.png";
 ---
 
+
 <MainLayout title="Blandet vinkasse">
+
+    <!-- Hero section -->
     <div class="">
         <div class="">
             <img class="" src={forsidebilledemobil.src} alt="" alt="">
-            <img class="" src={darkhillmobile.src} alt="" alt="">
+            <!-- <img class="" src={darkhillmobile.src} alt="" alt=""> -->
         </div>
     </div>
 
@@ -25,67 +31,141 @@ import stjerne from "../assets/images/stjerne.png";
     <section class="max-w-7xl mx-auto md:p-0 p-8">
 
 
-<!-- Denne sektion skal have en mørke grå baggrundsfarve -->
-        <div class="">
+<!-- Første sektion -->
+        <div class="bg-neutral-800">
             <div class="">
                 <img class="" src={forsidebillede2mobil.src} alt="" alt="">
-                <h1>Tag på en vinoplevelse</h1>
-                <p>Hos Vinens Essens finder du et nøje udvalgt sortiment af vine, der rummer både overraskelser og velkendte favoritter. Som en del af vores koncept tilbyder vi et månedligt abonnement, vi udvælger vine til dig – uden at afsløre, hvad du får, så hver levering føles som en spændende overraskelse. Flere af vores vine kan endda kun nydes på udvalgte, eksklusive restauranter, hvor kvalitet og passion for vin går hånd i hånd.</p>
+                <h2 class="h2-mobile pl-[20px] pt-[20px]">Tag på en vinoplevelse</h2>
+                <p class="p-mobile pl-[20px] pt-[20px] pb-[40px] w-[237px]">Hos Vinens Essens finder du et nøje udvalgt sortiment af vine, der rummer både overraskelser og velkendte favoritter. Som en del af vores koncept tilbyder vi et månedligt abonnement, vi udvælger vine til dig – uden at afsløre, hvad du får, så hver levering føles som en spændende overraskelse. Flere af vores vine kan endda kun nydes på udvalgte, eksklusive restauranter, hvor kvalitet og passion for vin går hånd i hånd.</p>
             </div>
         </div>
 
+                <!------------------------------ Infografik ------------------------------>
+                <section class="grid md:grid-cols-12 gap-gap md:pb-desktop-bottom pb-mobil-bottom pt-[138px]">
+                    <section class="col-span-3 flex flex-col items-center text-center md:pb-0 pb-10">
+                        <img class="md:h-40 h-32 mb-4" src="/vaelg_red.svg" alt="En computermus der vælger vinkasse" />
+                        <div>
+                            <h1 class="md:text-h4-desktop text-h4-mobile font-display font-semibold">1. Vælg din pakke</h1>
+                            <p>Find den pakke, der passer bedst til dig, og glæd dig til spændende vinoplevelser hver måned.</p>
+                        </div>
+                    </section>
+        
+                    <section class="col-span-3 flex flex-col items-center text-center md:pb-0 pb-10">
+                        <img class="md:h-40 h-32 mb-4" src="/udvaelger_red.svg" alt="En hånd der vælger vin" />
+                        <div>
+                            <h1 class="md:text-h4-desktop text-h4-mobile font-display font-semibold">2. Vi udvælger vinen</h1>
+                            <p>Hver måned håndplukker vi 3-6 vine af høj kvalitet, så du kan opleve nye smagsoplevelser.</p>
+                        </div>
+                    </section>
+        
+                    <section class="col-span-3 flex flex-col items-center text-center md:pb-0 pb-10">
+                        <img class="md:h-40 h-32 mb-4" src="/levering_red.svg" alt="En varervong der levere" />
+                        <div>
+                            <h1 class="md:text-h4-desktop text-h4-mobile font-display font-semibold">3. Gratis levering</h1>
+                            <p>Alle vores abonnenter får altid gratis levering – nemt og bekvemt.</p>
+                        </div>
+                    </section>
+        
+                    <section class="col-span-3 flex flex-col items-center text-center">
+                        <img class="md:h-40 h-32 mb-4" src="/nyd_red.svg" alt="To vinglas der skåler" />
+                        <div>
+                            <h1 class="md:text-h4-desktop text-h4-mobile font-display font-semibold">4. Nyd din vin</h1>
+                            <p>Skænk op, læn dig tilbage, og nyd de unikke smagsnuancer i hver flaske.</p>
+                        </div>
+                    </section>
+                </section>
+                
 
-        <div class="">
-            <div class="">
-                <p>ikon</p>
-                <p>1.</p>
-                <h1>Vælg pakke</h1>
-                <p>Find den pakke, der passer bedst til dig, og glæd dig til spændende vinoplevelser hver måned.</p>
-            </div>
-        </div>
+
+
 
         <!-- Billede af "Ekslusive vine" -->
-        <div>
-            <div>
-                <img src="" alt="">
+        <div class="flex justify-center">
+            <div class="">
+                <img class="max-w-[130px] max-h-[303px]" src={twowinebottle.src} alt="" alt="">
             </div>
         </div>
 
 
         <!-- Rød trekant, H1, <p>, button, rød trekant -->
-        <div>
-            <div>
-                <img src="" alt="">
-                <h2></h2>
-                <p></p>
-                <a href=""></a>
-                <img src="" alt="">
+            <div class="flex justify-center flex-col items-center">
+                <div>
+                    <img class="" src={trekantforsidemobil.src} alt="">
+                    <div class="bg-red-800">
+                        <h2 class="flex justify-center pt-[10px]">Eksklusive vine</h2>
+                        <p class="pt-[15px] pl-[25px] pr-[25px] w-[269px]">Vinens Essens tilbyder nøje udvalgte vine, der kombinerer høj kvalitet og unikke smagsoplevelser. Flere af vores vine findes kun i udvalgte restauranter eller er anbefalet af vores loyale kunder – perfekt til at gøre enhver anledning ekstraordinær.</p>
+                        <a class="flex justify-center items-center pt-[10px] border-5 border-white" href="#">Se mere</a>
+                    </div>
+                    <img class="" src={trekantforsidemobildown.src} alt="">
+                </div>
             </div>
-        </div>
+            
 
 
-        <!-- Anmeldeserne -->
-        <div>
-            <div>
-                <!-- <h1>ANMELDELSER</h1> -->
+        <!-- Anmeldelser -->
+        <div class="pt-[40px]">
+            <div class="h1-mobile flex flex-col justify-center text-center">
+                <h2 class="h1-mobile">ANMELDELSER</h2>
 
                 <!-- Den røde streg -->
-                <img src="" alt="">
+                <div class="flex justify-center pt-[6px]">
+                    <hr class="border-t-2 border-red-800 w-32" />
+                </div>
             </div>
         </div>
 
 
-        <div>
-            <div>
-                <img src="" alt="">
-                <h2>God vin</h2>
-                <p>Fantastisk vin! Smagen er unik, og kvaliteten er altid i top.</p>
-                <p class="">- Lærke Berge</p>
+<!-- Første anmeldelse -->
+        <div class="pt-[20px]">
+            <div class="flex flex-col justify-center items-center text-center">
+                <img class="max-w-[170px] max-h-[170px]" src={stjerner.src} alt="">
+                <h2 class="pt-[10px] h2-mobile">God vin</h2>
+                <p class="p-mobile">Fantastisk vin! Smagen er unik, og kvaliteten er altid i top.</p>
+                <p class="text-neutral-300">- Lærke Berge</p>
             </div>
         </div>
 
 
-        <div>
+
+        <!-- Anden anmeldelse -->
+        <div class="pt-[60px]">
+            <div class="flex flex-col justify-center items-center text-center">
+                <img class="max-w-[170px] max-h-[170px]" src={stjerner.src} alt="">
+                <h2 class="pt-[10px] h2-mobile">Kan anbefales</h2>
+                <p class="p-mobile">En fornøjelse hver gang. Perfekt til både hverdag og særlige anledninger.</p>
+                <p class="text-neutral-300">- Mikkel Damsgaard</p>
+            </div>
+        </div>
+
+
+        <!-- Tredje anmeldelse -->
+        <div class="pt-[60px]">
+            <div class="flex flex-col justify-center items-center text-center">
+                <img class="max-w-[170px] max-h-[170px]" src={stjerner.src} alt="">
+                <h2 class="pt-[10px] h2-mobile">Vilde udvalg</h2>
+                <p class="p-mobile">Eksklusiv vin med en dybde, der gør enhver middag uforglemmelig.</p>
+                <p class="text-neutral-300">- Noah Carter</p>
+            </div>
+        </div>
+
+
+        <!-- Fjerde anmeldelse -->
+        <div class="pt-[60px]">
+            <div class="flex flex-col justify-center items-center text-center">
+                <img class="max-w-[170px] max-h-[170px]" src={stjerner.src} alt="">
+                <h2 class="pt-[10px] h2-mobile">Professionelle</h2>
+                <p class="p-mobile">Service i verdensklasse – de gør alt for at sikre en god oplevelse.</p>
+                <p class="text-neutral-300">- Natasja Daglemør</p>
+            </div>
+        </div>
+
+
+
+        <!-- Comment ish -->
+        
+
+
+        <!-- <div>
             <div>
                 <img src="" alt="">
             </div>
@@ -101,6 +181,8 @@ import stjerne from "../assets/images/stjerne.png";
             <div>
                 <img src="" alt="">
             </div>
-        </div>
+        </div> -->
 
 </MainLayout>
+
+
