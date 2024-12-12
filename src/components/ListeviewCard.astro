@@ -9,8 +9,6 @@ export interface CardProps {
   extralabel: string; // Optional prop for the additional label
 }
 
-import { Image } from "astro:assets";
-import bottle from "../assets/images/red_bottle.svg";
 import Button from "../components/Button.astro";
 const { image, label, title, description, price, buttonText, extralabel } = Astro.props;
 ---
@@ -28,7 +26,7 @@ const { image, label, title, description, price, buttonText, extralabel } = Astr
       <!-- Label 1 -->
       <span class="flex flex-row justify-evenly gap-3 items-center absolute bottom-4 right-0 text-neutral-950 bg-neutral-100 p-2 w-24">
         {label}
-        <Image src={bottle} alt="bottle icon" width="10" height="10" />
+        <img src="/flaske_icon_red.svg" alt="bottle icon" width="12" height="12" />
       </span>
 
       <!-- Label 2 (Only on Card with Position 1) -->
