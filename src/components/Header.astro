@@ -7,8 +7,15 @@ import Button from "../components/Button.astro";
   <!-- brug "fixed" for at have den på siden hele vejen ned -->
   <div id="navbar" class="relative flex items-center max-w-7xl mx-auto z-[50]">
     <!-- Burger Menu -->
-    <button id="burgermenu" class="lg:hidden absolute right-4 top-8 transform -translate-y-1/2" x-on:click="showmenu = !showmenu">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 text-neutral-50">
+    <button id="burgermenu" class="lg:hidden absolute right-7 top-8 transform -translate-y-1/2" x-on:click="showmenu = !showmenu">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-8 text-neutral-50 hover:text-red-800 transiton duration-300 ease-in-out"
+      >
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
       </svg>
     </button>
@@ -31,7 +38,7 @@ import Button from "../components/Button.astro";
       <!-- Center Section: Logo -->
       <div class="flex-shrink-0 flex items-center justify-center px-[5rem]">
         <a href="#logo">
-          <img src="/logo.svg" alt="Logo for Vinens Essens" class="h-10" />
+          <img src="/Logo_hvid.svg" alt="Logo for Vinens Essens" class="h-20 transition duration-300 ease-in-out hover:scale-105 hover:opacity-50" />
         </a>
       </div>
 
@@ -49,21 +56,26 @@ import Button from "../components/Button.astro";
     </nav>
   </div>
 
+  <!-- Mobile Menu -->
   <nav
     id="mobilmenu"
-    class="flex flex-col content-center items-end text-right pt-4"
+    class="flex flex-col items-end text-right pt-4"
     x-show="showmenu"
     x-transition
     x-on:click="showmenu = false"
     x-on:click.outside="showmenu = false"
   >
-    <ul class="list-none pt-12">
-      <li class="some1"><a href="/" class="mt-4 text-neutral-50">Hjem</a></li>
-      <li class="some1"><a href="/om" class="mt-4 text-neutral-50">Om os</a></li>
-      <li class="some1"><a href="/listeview" class="mt-4 text-neutral-50">Vinkasser</a></li>
-      <li class="some1"><a href="/formular_levering" class="mt-4 text-neutral-50">Levering</a></li>
+    <ul class="list-none pt-8 px-8">
+      <li class="some1 pt-8"><a href="/" class="text-neutral-50">Hjem</a></li>
+      <hr class="border-t-2 my-4 w-28 border-neutral-50" />
+      <li class="some1 pt-8"><a href="/om" class="text-neutral-50">Om os</a></li>
+      <hr class="border-t-2 my-4 w-28 border-neutral-50" />
+      <li class="some1 pt-8"><a href="/listeview" class="text-neutral-50">Vinkasser</a></li>
+      <hr class="border-t-2 my-4 w-28 border-neutral-50" />
+      <li class="some1 pt-8"><a href="/formular_levering" class="text-neutral-50">Levering</a></li>
+      <hr class="border-t-2 my-4 w-28 border-neutral-50" />
     </ul>
-    <a href="/formular_vinkasse" class="mt-4">
+    <a href="/formular_vinkasse" class="mt-12 px-8">
       <Button variant="primary" size="small">Bestil abonnement</Button>
     </a>
   </nav>
@@ -82,7 +94,7 @@ import Button from "../components/Button.astro";
     width: 100%;
     height: 2px;
     border-radius: 4px;
-    background-color: #c60e18;
+    background-color: #7e1319;
     bottom: 0;
     left: 0;
     transform-origin: right;
