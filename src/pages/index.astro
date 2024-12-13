@@ -230,7 +230,7 @@ import wineshelfipad from "../assets/images/ipadimages/wineshelfipad.png";
 
     <div class="md:block sm:hidden">
 
-        <!-- Hero section -->
+        <!-- Hero section responsivt-->
         <div class="">
             <img class="" src={imageipadhero.src} alt="" alt="">
         </div>
@@ -240,11 +240,118 @@ import wineshelfipad from "../assets/images/ipadimages/wineshelfipad.png";
  
 
         <section class="max-w-7xl mx-auto md:p-0 p-8">
-            <div class="grid md:grid-cols-12 ">
-                <img class="col-span-4" src={forsidebillede2mobil.src} alt="" alt="">
+            <div class="grid md:grid-cols-12 gap-gap">
+                <img class="col-span-6" src={forsidebillede2mobil.src} alt="" alt="">
+                <div class="flex flex-col justify-center w-96 col-start-7">
+                    <h1 class="col-span-7 text-h1-desktop font-display font-regular">Tag på en vinoplevelse</h1>
+                    <p class="text-p-desktop font-lato font-regular col-span-12 col-start-12">Hos Vinens Essens finder du et nøje udvalgt sortiment af vine, der rummer både overraskelser og velkendte favoritter. Som en del af vores koncept tilbyder vi et månedligt abonnement, vi udvælger vine til dig – uden at afsløre, hvad du får, så hver levering føles som en spændende overraskelse. Flere af vores vine kan endda kun nydes på udvalgte, eksklusive restauranter, hvor kvalitet og passion for vin går hånd i hånd.</p>
+                </div>
+
             </div>
 
         </section>
+
+
+        <!-- Anden sektion -->
+        <section class="max-w-7xl mx-auto md:p-0 p-8 grid md:grid-cols-12 gap-gap md:pb-desktop-bottom pb-mobil-bottom pt-[138px] mt-[175px]">
+            <section class="col-span-5 col-start-2 flex items-center md:pb-0 pb-10">
+                <img class="md:h-40 h-32 mb-4" src="/vaelg_red.svg" alt="En computermus der vælger vinkasse" />
+                <div>
+                    <h1 class="md:text-h4-desktop text-h4-mobile font-display font-semibold">1. Vælg din pakke</h1>
+                    <p class="text-p-mobile font-lato font-regular">Find den pakke, der passer bedst til dig, og glæd dig til spændende vinoplevelser hver måned.</p>
+                </div>
+            </section>
+
+            <section class="col-span-7 col-start-7 flex items-center md:pb-0 pb-10">
+                <img class="md:h-40 h-32 mb-4" src="/udvaelger_red.svg" alt="En hånd der vælger vin" />
+                <div>
+                    <h1 class="md:text-h4-desktop text-h4-mobile font-display font-semibold pl-6">2. Vi udvælger vinen</h1>
+                    <p class="text-p-mobile font-lato font-regular pl-6 w-[380px]">Hver måned håndplukker vi 3-6 vine af høj kvalitet, så du kan opleve nye smagsoplevelser.</p>
+                </div>
+            </section>
+
+        </section>
+
+        <!-- Andet afsnit af anden sektion -->
+        <section class="max-w-7xl mx-auto md:p-0 p-8 grid md:grid-cols-12 gap-gap md:pb-desktop-bottom pb-mobil-bottom pt-[138px] ">
+            <section class="col-span-5 col-start-2 flex items-center md:pb-0 pb-10">
+                <img class="md:h-40 h-32 mb-4" src="/levering_red.svg" alt="En computermus der vælger vinkasse" />
+                <div>
+                    <h1 class="md:text-h4-desktop text-h4-mobile font-display font-semibold">3. LEVERING</h1>
+                    <p class="text-p-mobile font-lato font-regular">Alle vores abonnenter får altid gratis levering – nemt og bekvemt.</p>
+                </div>
+            </section>
+
+            <section class="col-span-7 col-start-7 flex items-center md:pb-0 pb-10">
+                <img class="md:h-40 h-32 mb-4" src="/nyd_red.svg" alt="En hånd der vælger vin" />
+                <div>
+                    <h1 class="md:text-h4-desktop text-h4-mobile font-display font-semibold pl-6">4. Nyd vinen</h1>
+                    <p class="text-p-mobile font-lato font-regular pl-6 w-[380px]">Skænk op, læn dig tilbage, og nyd de unikke smagsnuancer i hver flaske.</p>
+                </div>
+            </section>
+
+        </section>
+
+        <!-- Ekslusive vin sektion -->
+        <!-- <div>
+            <div>
+                <img class="col-span-6" src={twowinebottle.src} alt="" alt="">
+            </div>
+        </div> -->
+
+
+        <!-- Anmeldelser -->
+        <div>
+            <div class="flex items-center flex-col">
+                <h1 class="text-h1-desktop font-display font-regular pb-4">ANMELDELSER</h1>
+                <hr class="border-t-2 border-red-800 w-56 pb-7"/>
+            </div>
+        </div>
+
+
+        <section class="grid md:grid-cols-12 gap-gap md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto md:p-0 p-8">
+            <section class="col-span-3 flex flex-col items-center text-center md:pb-0 pb-10">
+                <!-- <img class="md:h-40 h-32 mb-4" src="/stjerner.png" alt="En computermus der vælger vinkasse" /> -->
+                <img class="max-w-[200px] max-h-[200px]" src={stjerner.src} alt="" alt="">
+                <div>
+                    <h1 class="md:text-h4-desktop text-h4-mobile font-display font-semibold">God vin</h1>
+                    <p>Fantastik vin! Smagen er unik, og kvaliteten er altid i top</p>
+                    <p class="text-neutral-300">- Lærke Berge</p>
+                </div>
+            </section>
+
+            <section class="col-span-3 flex flex-col items-center text-center md:pb-0 pb-10">
+                <img class="max-w-[200px] max-h-[200px]" src={stjerner.src} alt="" alt="">
+                <div>
+                    <h1 class="md:text-h4-desktop text-h4-mobile font-display font-semibold">Kan anbefales</h1>
+                    <p>En fornøjelse hver gang. Perfekt til både hverdag og særlige anledninger.</p>
+                    <p class="text-neutral-300">- Mikkel Damsgaard</p>
+                </div>
+            </section>
+
+            <section class="col-span-3 flex flex-col items-center text-center md:pb-0 pb-10">
+                <img class="max-w-[200px] max-h-[200px]" src={stjerner.src} alt="" alt="">
+                <div>
+                    <h1 class="md:text-h4-desktop text-h4-mobile font-display font-semibold">Vilde udvalg</h1>
+                    <p>Ekslusiv vin med en dybde, der gør enhver middag uforglemmelig.</p>
+                    <p class="text-neutral-300">- Noah Carter</p>
+                </div>
+            </section>
+
+            <section class="col-span-3 flex flex-col items-center text-center">
+                <img class="max-w-[200px] max-h-[200px]" src={stjerner.src} alt="" alt="">
+                <div>
+                    <h1 class="md:text-h4-desktop text-h4-mobile font-display font-semibold">Professionelle</h1>
+                    <p>Service i verdensklasse - de gør alt for at sikre en god oplevelse.</p>
+                    <p class="text-neutral-300">- Natasja Daglemør</p>
+                </div>
+            </section>
+        </section>
+
+
+          
+
+
 
 
     </div>

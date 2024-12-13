@@ -6,6 +6,8 @@ export default {
       colors: {
         transparent: "transparent",
         current: "currentColor",
+
+        
 red: {
         50: '#fff1f2',
         100: '#ffe0e2',
@@ -110,4 +112,6 @@ red: {
       require("@tailwindcss/container-queries"),
     ],
   };
+
+  
   
