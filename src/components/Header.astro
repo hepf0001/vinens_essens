@@ -35,9 +35,9 @@ import Button from "../components/Button.astro";
     </button>
 
     <!-- Desktop Menu -->
-    <nav id="desktopmenu" class="hidden lg:flex flex-1 items-center justify-around py-1 px-4 bg-white shadow z-[20]">
+    <nav id="desktopmenu" class="hidden lg:flex flex-1 items-center justify-center py-1 px-4 bg-white shadow z-[20]">
       <!-- Left Section: Links -->
-      <ul class="some1 flex flex-row gap-20 list-none items-center text-center">
+      <ul class="some1 flex flex-row gap-12 list-none items-center text-center">
         <li>
           <a href="/" class="text-neutral-50 py-2 hover:opacity-70">Hjem</a>
         </li>
@@ -52,13 +52,13 @@ import Button from "../components/Button.astro";
           <img
             src="/Logo_hvid.svg"
             alt="Logo for Vinens Essens"
-            class="h-20 transition duration-300 ease-in-out transform hover:-translate-y-[3px] hover:opacity-70"
+            class="px-[3rem] h-20 transition duration-300 ease-in-out transform hover:-translate-y-[3px] hover:opacity-70"
           />
         </a>
       </div>
 
       <!-- Right Section: Links and Button -->
-      <div class="flex items-center gap-20">
+      <div class="flex items-center gap-12">
         <ul class="some1 list-none">
           <li class="hover:opacity-70">
             <a href="/listeview" class="text-neutral-50 py-2">Vinkasser</a>
@@ -81,7 +81,7 @@ import Button from "../components/Button.astro";
     x-on:click.outside="showmenu = false"
   >
     <ul class="some1 list-none pt-8 px-8">
-      <li class="pt-12"><a href="/" class="text-neutral-50 py-2 hover:opacity-70">Hjem</a></li>
+      <li><a href="/" class="text-neutral-50 py-2 hover:opacity-70">Hjem</a></li>
       <hr class="border-t-2 my-6 w-28 border-neutral-50" />
       <li><a href="/om" class="text-neutral-50 py-2 hover:opacity-70">Om os</a></li>
       <hr class="border-t-2 my-6 w-28 border-neutral-50" />
